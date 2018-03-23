@@ -1,0 +1,13 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':apt-annotation')
+
+    implementation 'com.google.auto.service:auto-service:1.0-rc2'
+    //帮助我们利用构建则模式生成java文件
+    implementation 'com.squareup:javapoet:1.8.0'
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
